@@ -1,0 +1,15 @@
+[package]
+name = "ffff"
+version = "0.1.0"
+edition = "2024"
+license = "AGPL-3.0-only"
+description = "Async GNU grep-compatible searches backed by a vendored persistent FFF index"
+
+[dependencies]
+fff-search = { version = "=0.10.6", path = "vendor/fff-search" }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time"] }
+shell-words = "1"
+
+[dev-dependencies]
+tempfile = "3"
+libc = "0.2"
